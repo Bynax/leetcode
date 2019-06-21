@@ -33,7 +33,7 @@
 
     因为给的参数是head，因此第一步是对head后面的元素进行reverse，然后将head插入reverse末尾并将head的next置为null。这里有一个tip是找reverse后链表的末尾是不用遍历该链表的，因为head的next是reverse后的最后一个节点。
 
-    ![](/Users/bohuanshi/Pictures/图片 1.png)
+    ![](./pics/revese_rec.png)
 
   - 迭代解法
 
