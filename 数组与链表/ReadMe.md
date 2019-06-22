@@ -1,5 +1,5 @@
 ## 数组与链表
-###[24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/description/)
+### [24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
 
 - 题目描述
   Given a linked list, swap every two adjacent nodes and return its head.
@@ -14,7 +14,7 @@
 
   
 
-###[206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+### [206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 - 题目描述：
   Reverse a singly linked list.
@@ -36,7 +36,7 @@
   - 迭代解法
     迭代解法的思想是交换相邻两个元素的指针方向，可以看作是头插法。
 
-### [141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
+### [141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 - 题目描述：
   Given a linked list, determine if it has a cycle in it.
 
@@ -44,7 +44,7 @@
 - 思路：
   使用快慢节点的方法，设置fastNode，每次移动两步，设置一个slowNode每次移动一步，若有环快节点一定可以追上慢节点。数学证明其实就是假设cycle包含的节点是n个，当slowNode到达intersection时候可以根据初始情况计算出fastNode的位置，转换成小学的追击问题。
   **注：**因为fastNode每次移动两个，一定要判断fastNode.next不为空，否则会有空指针异常。
-### [142.Linked List Cycle II]()
+### [142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 - 题目描述：
   Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 
