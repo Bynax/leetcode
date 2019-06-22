@@ -18,7 +18,7 @@
 //     }
 // }
 
- class Solution {
+ class Solution4 {
     // public static void main(String[] args) {
     //     ListNode head = new ListNode(1);
     //     ListNode two = new ListNode(2);

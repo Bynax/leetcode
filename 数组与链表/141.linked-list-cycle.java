@@ -1,8 +1,4 @@
-/*
- * @lc app=leetcode id=141 lang=java
- *
- * [141] Linked List Cycle
- */
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -14,7 +10,9 @@
  *     }
  * }
  */
-public class Solution {
+
+
+class Solution2 {
     public static boolean hasCycle(ListNode head) {
         return hasCycleFastAndLow(head);
     }
@@ -29,17 +27,19 @@ public class Solution {
         if(head==null|| head.next==null){
             return false;
         }
-        ListNode fastNode = head.next; //设置快节点
+        ListNode fastNode = head; //设置快节点
         ListNode slowNode = head; //设置慢节点
-        while(fastNode!=slowNode){
-            // 若没有环，快节点肯定比慢节点先到末尾，只需要判断他们为null就可以
-            if(fastNode==null||fastNode.next==null){
-                return false; // 
-            }
+        while(fastNode.next!=null&&fastNode.next.next!=null){
             fastNode = fastNode.next.next; //更新
             slowNode = slowNode.next; //更新
+            // 若没有环，快节点肯定比慢节点先到末尾，只需要判断他们为null就可以
+            if(fastNode==slowNode){
+                return true; // 
+            }
+            
         }
-        return true; // 跳出循环表示追上了，也就是有环
+        return false; // 跳出循环表示追上了，也就是有环
     }
+
 }
 

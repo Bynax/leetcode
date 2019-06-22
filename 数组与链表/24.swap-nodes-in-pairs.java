@@ -18,7 +18,7 @@
 //     }
 // }
 
-class Solution {
+class Solution1 {
     public static ListNode swapPairs(ListNode head) {
         return swap(head);
     }
