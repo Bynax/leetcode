@@ -18,7 +18,7 @@
 
 - 题目描述：
   Reverse a singly linked list.
-  
+
   **Example:**
 
   ```java
@@ -52,6 +52,5 @@
 
   Note: Do not modify the linked list.
 - 思路：
-
-
-
+  环的检测同141. 解法。之后的思路如下图：
+  ![cycle_detect](./pics/cycle_detect.png)
