@@ -3,42 +3,10 @@
  *
  * [206] Reverse Linked List
  */
-/**
- * Definition for singly-linked list. public class ListNode { int val; ListNode
- * next; ListNode(int x) { val = x; } }
- */
 
-// 测试代码
-// class ListNode {
-//     int val;
-//     ListNode next;
+class Solution206 {
 
-//     ListNode(int x) {
-//         val = x;
-//     }
-// }
-
- class Solution4 {
-    // public static void main(String[] args) {
-    //     ListNode head = new ListNode(1);
-    //     ListNode two = new ListNode(2);
-    //     ListNode three = new ListNode(3);
-    //     ListNode four = new ListNode(4);
-    //     ListNode five = new ListNode(5);
-    //     head.next = two;
-    //     two.next = three;
-    //     three.next = four;
-    //     four.next = five;
-    //     five.next = null;
-    //     ListNode result = reverseList(head);
-    //     while (result != null) {
-    //         System.out.println(result.val);
-    //         result = result.next;
-    //     }
-
-    // }
-
-    public  ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         return reverseListIter(head);
     }
 
@@ -69,7 +37,7 @@
      * @param head 头节点
      * @return head 反转好的头节点
      */
-     ListNode reverseListIter(ListNode head) {
+    ListNode reverseListIter(ListNode head) {
         // 判空和单独节点的情况
         if (head == null || head.next == null) {
             return head;
@@ -79,10 +47,10 @@
         ListNode nextNode;// 下一个节点
         // 循环的过程可以看作是使用头插法将currentNode插到preNode的过程
         while (currentNode != null) {
-           nextNode = currentNode.next; // 保留现在的nextNode作为下一次的currentNode
-           currentNode.next = preNode; // 反转当前的currentNode
-           preNode = currentNode; 
-           currentNode = nextNode;
+            nextNode = currentNode.next; // 保留现在的nextNode作为下一次的currentNode
+            currentNode.next = preNode; // 反转当前的currentNode
+            preNode = currentNode;
+            currentNode = nextNode;
         }
         return preNode;
     }

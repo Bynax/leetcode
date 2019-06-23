@@ -1,10 +1,9 @@
 
-/**
- * Definition for singly-linked list. class ListNode { int val; ListNode next;
- * ListNode(int x) { val = x; next = null; } }
+/*
+ * @lc app=leetcode id=142 lang=java
  */
 
-class Solution3{
+class Solution142{
     public static ListNode detectCycle(ListNode head) {
         return cycleDetect(head);
     }
