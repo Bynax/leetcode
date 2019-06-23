@@ -73,16 +73,25 @@
 
 - 思路：
   - 迭代
+
     关键参数：
+
     dummyHead 假的组头
+
     head reverse的起始结点
+
     currentNode reverse的tail结点
+
     迭代的思路与[24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)的思路相近，都是先找一个一组(每k个为一组)的dummyHead，开始的时候可以先new一个。
     接着对每一个组进行reverse(封装为函数方便复用)
     更新dummyHead、head和currentNode
+
   - 递归
+
     先对前k个进行reverse
+
     对后面剩余的链表进行递归操作
+    
     将第一步得到的尾结点的next置为第二步得到的头结点。
 
 
