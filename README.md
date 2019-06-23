@@ -18,3 +18,4 @@ vscode+leetcode插件
         - [206.Reverse Linked List](./linkedlist/141.linked-list-cycle.java)
         - [141.Linked List Cycle](./linkedlist/142.linked-list-cycle-ii.java)
         - [142.Linked List Cycle II](./linkedlist/206.reverse-linked-list.java)
+        - [25.Reverse Nodes in k-Group](./linkedlist/25.reverse-nodes-in-k-group.java)
