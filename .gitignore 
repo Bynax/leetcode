@@ -8,3 +8,5 @@
 */.idea/
 .idea/
 */.vscode/
+./.gitignore
+./.gitignore_global
