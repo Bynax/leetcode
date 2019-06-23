@@ -1,4 +1,19 @@
 ## 数组与链表
+
+## 基本知识
+
+- ### Dummy Node in Linked List
+
+  当链表结构发生变化时，reverse或者删除等操作，只要链表结构发生变化，head就有可能发生变化，因此需要使用DummyHead
+
+- ### Basic Linked List Skills
+
+- ### Two Pointers in Linked List（Fast-slow pointers）
+
+
+
+## 部分题目
+
 ### [24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
 
 - 题目描述
