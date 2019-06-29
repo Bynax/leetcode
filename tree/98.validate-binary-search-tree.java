@@ -3,7 +3,7 @@
  * [98] Validate Binary Search Tree
  */
 
-class Solution {
+class Solution98 {
 
     public static boolean isValidBST(TreeNode root) {
         return isValidBSTTravel(root, Long.MIN_VALUE);

@@ -11,8 +11,6 @@
 
 ### [98. Validate Binary Search Tree](./tree/98.validate-binary-search-tree.java)
 
-- 题目描述
-
 - 思路
 
   - 递归
@@ -37,15 +35,14 @@
 
 
 
+
 ### [235. Lowest Common Ancestor of a Binary Search Tree](./tree/235.lowest-common-ancestor-of-a-binary-search-tree)
 
-- 题目描述
-
-  
-
 - 思路
+
+  还是BST的性质，如果两个的值都大于root的值，说明在右子树，如果都小于root的值，说明在左子树。如果一大一小，说明LCA就是root。
 
 ### [236. Lowest Common Ancestor of a Binary Tree](./tree/236.lowest-common-ancestor-of-a-binary-tree/)
 
-- 题目描述
 - 思路
+
