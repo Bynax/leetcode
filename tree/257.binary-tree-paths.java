@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -18,12 +19,28 @@ class Solution {
      * @return
      */
     static List<String> binaryTreePathsRec(TreeNode root){
-        
+        List<String> results = new ArrayList<>();
         if(root==null){
-            return root;
+            return results;
         }
+        binaryTreePathsRecHelper(root, "", results);
+        return results;
         
+    }
+
+    static void binaryTreePathsRecHelper(TreeNode root,String path,List<String>results){
+        // leaf
+        if(root.left==null&&root.right==null){
+            results.add(path+root.val);
+        }
+        if(root.left!=null){
+            binaryTreePathsRecHelper(root.left, path+root.val+"->", results);
+        }
+        if(root.right!=null){
+            binaryTreePathsRecHelper(root.right,path+root.val+"->",results);
+        }
 
     }
+
 }
 
