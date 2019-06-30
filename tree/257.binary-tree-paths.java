@@ -28,6 +28,12 @@ class Solution {
         
     }
 
+    /**
+     * 递归的辅助方法
+     * @param root
+     * @param path
+     * @param results
+     */
     static void binaryTreePathsRecHelper(TreeNode root,String path,List<String>results){
         // leaf
         if(root.left==null&&root.right==null){

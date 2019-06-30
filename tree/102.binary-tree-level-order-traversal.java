@@ -13,6 +13,12 @@ class Solution {
         return levelOrderImp(root);
     }
 
+
+    /**
+     * 二叉树的层级遍历
+     * @param root
+     * @return
+     */
     static List<List<Integer>> levelOrderImp(TreeNode root) {
         // LinkedList类实现了Queue接口，因此我们可以把LinkedList当成Queue来用
         Queue<TreeNode> queue = new LinkedList<TreeNode>(); 

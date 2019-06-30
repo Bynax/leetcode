@@ -10,6 +10,13 @@ class Solution {
 
     }
 
+    /**
+     * 使用递归寻找BST的LCA
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     static TreeNode lowestCommonAncestorRec(TreeNode root, TreeNode p, TreeNode q) {
 
         if (p.val > root.val && q.val > root.val) {
@@ -22,6 +29,13 @@ class Solution {
 
     }
 
+    /**
+     * 使用迭代寻找BST的LCA
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     static TreeNode lowestCommonAncestorIter(TreeNode root, TreeNode p, TreeNode q) {
         while (root != null) {
             if (p.val > root.val && q.val > root.val) {

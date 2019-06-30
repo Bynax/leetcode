@@ -8,6 +8,13 @@ class Solution {
         return LCA(root, p, q);
     }
 
+    /**
+     * 
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
     static TreeNode LCA(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
             return root;
