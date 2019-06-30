@@ -22,6 +22,10 @@ vscode+leetcode插件
 - **树**
     - [思路](./tree/ReadMe.md)
     - 代码
+        - [x] [94.Binary Tree Inorder Traversal](./tree/94.binary-tree-inorder-traversal.java)
         - [x] [98.Validate Binary Search Tree](./tree/98.validate-binary-search-tree.java)
-        - [ ]  [235. Lowest Common Ancestor of a Binary](./tree/235.lowest-common-ancestor-of-a-binary-search-tree.java)
-        - [ ] [236.Lowest Common Ancestor of a Binary ](./tree/236.lowest-common-ancestor-of-a-binary-tree.java)
+        - [x] [102.Binary Tree Level Order Traversal](./tree/102.binary-tree-level-order-traversal.java)
+        - [x] [144.Binary Tree Preorder Traversal](./tree/144.binary-tree-preorder-traversal.java)
+        - [x] [145.Binary Tree Postorder Traversal](./tree/145.binary-tree-postorder-traversal.java)
+        - [x] [235. Lowest Common Ancestor of a Binary](./tree/235.lowest-common-ancestor-of-a-binary-search-tree.java)
+        - [x] [236.Lowest Common Ancestor of a Binary ](./tree/236.lowest-common-ancestor-of-a-binary-tree.java)
