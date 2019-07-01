@@ -14,6 +14,7 @@ vscode+leetcode插件
 - **数组与链表**
     - [思路](./linkedlist/ReadMe.md)
     - 代码
+        - [x] [2.Add Two Numbers](./linkedlist/2.add-two-numbers.java)
         - [x] [24.Swap Nodes in Pairs](./linkedlist/24.swap-nodes-in-pairs.java)
         - [x] [206.Reverse Linked List](./linkedlist/141.linked-list-cycle.java)
         - [x] [141.Linked List Cycle](./linkedlist/142.linked-list-cycle-ii.java)
