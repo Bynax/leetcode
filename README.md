@@ -30,3 +30,7 @@ vscode+leetcode插件
         - [x] [145.Binary Tree Postorder Traversal](./tree/145.binary-tree-postorder-traversal.java)
         - [x] [235. Lowest Common Ancestor of a Binary](./tree/235.lowest-common-ancestor-of-a-binary-search-tree.java)
         - [x] [236.Lowest Common Ancestor of a Binary ](./tree/236.lowest-common-ancestor-of-a-binary-tree.java)
+- 字符串
+    - [思路](./string/ReadMe.md)
+    - 代码
+        - [x] ()[]
