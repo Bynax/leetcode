@@ -14,7 +14,29 @@
 
 ## 部分题目
 
-### [24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+### [2.Add Two Numbers](./2.add-two-numbers.java)
+
+- 题目描述
+
+  You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+  You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+  **Example:**
+
+  ```Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+  Output: 7 -> 0 -> 8
+  Explanation: 342 + 465 = 807.```
+
+- 思路：
+
+  头插法，首先声明一个dummyHead，因为链表的head是要不停发生变化的。声明一个currentNode作为游标，所指的为当前链表的末尾。声明carry记录进位
+  循环直至两链表都到末尾
+    - 使用x记录l1的值，使用y记录l2的值。将x+y+carry作为下一个结点的值
+    - 将新结点插入到currentNode的next
+    - 更新currentNode
+
+### [24.Swap Nodes in Pairs](./24.swap-nodes-in-pairs.java)
 
 - 题目描述
 
@@ -31,7 +53,7 @@
 
   
 
-### [206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+### [206.Reverse Linked List](./206.reverse-linked-list.java)
 
 - 题目描述：
 
@@ -56,7 +78,7 @@
 
     迭代解法的思想是交换相邻两个元素的指针方向，可以看作是头插法。
 
-### [141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+### [141.Linked List Cycle](./141.linked-list-cycle.java)
 
 - 题目描述：
 
@@ -69,7 +91,7 @@
   使用快慢节点的方法，设置fastNode，每次移动两步，设置一个slowNode每次移动一步，若有环快节点一定可以追上慢节点。数学证明其实就是假设cycle包含的节点是n个，当slowNode到达intersection时候可以根据初始情况计算出fastNode的位置，转换成小学的追击问题。
   **注：**因为fastNode每次移动两个，一定要判断fastNode.next不为空，否则会有空指针异常。
 
-### [142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+### [142.Linked List Cycle II](./142.linked-list-cycle-ii.java)
 
 - 题目描述：
 
@@ -84,7 +106,7 @@
   环的检测同141. 解法。之后的思路如下图：
   ![cycle_detect](./pics/cycle_detect.png)
 
-### [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+### [25. Reverse Nodes in k-Group](./25.reverse-nodes-in-k-group.java)
 
 - 题目描述：
 
