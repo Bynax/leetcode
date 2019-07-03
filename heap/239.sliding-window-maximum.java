@@ -3,9 +3,9 @@
  *
  * [239] Sliding Window Maximum
  */
-class Solution {
+class Solution239 {
     public int[] maxSlidingWindow(int[] nums, int k) {
-        
+        return null;
     }
 }
 

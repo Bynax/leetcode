@@ -3,14 +3,14 @@
  *
  * [703] Kth Largest Element in a Stream
  */
-class KthLargest {
+class KthLargest703 {
 
-    public KthLargest(int k, int[] nums) {
+    public KthLargest703(int k, int[] nums) {
         
     }
     
     public int add(int val) {
-        
+        return 0;
     }
 }
 

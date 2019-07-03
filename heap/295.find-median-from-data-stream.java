@@ -3,10 +3,10 @@
  *
  * [295] Find Median from Data Stream
  */
-class MedianFinder {
+class MedianFinder295 {
 
     /** initialize your data structure here. */
-    public MedianFinder() {
+    public MedianFinder295() {
         
     }
     
@@ -15,7 +15,7 @@ class MedianFinder {
     }
     
     public double findMedian() {
-        
+        return 0;
     }
 }
 
