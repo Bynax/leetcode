@@ -12,7 +12,7 @@
 
   这题目的整体思路是Merge sorted list one by one。对左右部分分别进行递归操作，在最后将左右部分合并即可。
 
-###[215.Kth Largest Element in an Array](./215.kth-largest-element-in-an-array.java) 
+### [215.Kth Largest Element in an Array](./215.kth-largest-element-in-an-array.java) 
 
 -  题目描述
 

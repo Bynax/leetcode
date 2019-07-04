@@ -30,7 +30,12 @@ vscode+leetcode插件
         - [x] [145.Binary Tree Postorder Traversal](./tree/145.binary-tree-postorder-traversal.java)
         - [x] [235. Lowest Common Ancestor of a Binary](./tree/235.lowest-common-ancestor-of-a-binary-search-tree.java)
         - [x] [236.Lowest Common Ancestor of a Binary ](./tree/236.lowest-common-ancestor-of-a-binary-tree.java)
+- 堆
+    - [思路](./heap/ReadMe.md)
+    - 代码
+        - [x] [23.Merge k Sorted Lists](./heap/23.merge-k-sorted-lists.java)
+        - [x] [215.Kth Largest Element in an Array](./heap/215.kth-largest-element-in-an-array.java)
 - 字符串
     - [思路](./string/ReadMe.md)
     - 代码
-        - [x] ()[]
+        - [ ] ()[]
