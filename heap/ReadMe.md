@@ -30,6 +30,15 @@
 
     随机选取一个元素作为pivot，将大于他的放在左边小于放右边。然后对比当前pivot的index与目标的index，如果大于则说明在右半部分，如果小于说明在左半部分，接着对选出来的部分进行同样的操作。
 
+### [218.The Skyline Problem](./218.the-skyline-problem.java)
+
+- 题目描述
+
+- 思路
+
+- 参考
+  https://leetcode.com/problems/the-skyline-problem/discuss/61192/Once-for-all-explanation-with-clean-Java-code(O(n2)time-O(n)-space)
+
     
 
 
