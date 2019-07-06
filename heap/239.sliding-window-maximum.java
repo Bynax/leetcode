@@ -4,8 +4,12 @@
  * [239] Sliding Window Maximum
  */
 class Solution239 {
-    public int[] maxSlidingWindow(int[] nums, int k) {
-        return null;
+    public static int[] maxSlidingWindow(int[] nums, int k) {
+        return maxSlidingWindowImp(nums, k);
+    }
+
+    static int[] maxSlidingWindowImp(int[] nums,int k){
+        
     }
 }
 

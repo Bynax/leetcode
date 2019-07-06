@@ -36,9 +36,37 @@
 
 - 思路
 
-- 参考
-  https://leetcode.com/problems/the-skyline-problem/discuss/61192/Once-for-all-explanation-with-clean-Java-code(O(n2)time-O(n)-space)
+  sweep line+堆
 
-    
+  [参考解析](https://leetcode.com/problems/the-skyline-problem/discuss/61192/Once-for-all-explanation-with-clean-Java-code(O(n2)time-O(n)-space)
+
+### [239.Sliding Window Maximum](./239.sliding-window-maximum.java)
+
+- 题目描述
+
+  Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
+
+  **Example：**
+
+  ```java
+  Input: nums = [1,3,-1,-3,5,3,6,7], and k = 3
+  Output: [3,3,5,5,6,7] 
+  Explanation: 
+  
+  Window position                Max
+  ---------------               -----
+  [1  3  -1] -3  5  3  6  7       3
+   1 [3  -1  -3] 5  3  6  7       3
+   1  3 [-1  -3  5] 3  6  7       5
+   1  3  -1 [-3  5  3] 6  7       5
+   1  3  -1  -3 [5  3  6] 7       6
+   1  3  -1  -3  5 [3  6  7]      7
+  ```
+
+  
+
+- 思路
+
+  
 
 
