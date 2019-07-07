@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+
 /*
  * @lc app=leetcode id=239 lang=java
  *
@@ -9,7 +11,18 @@ class Solution239 {
     }
 
     static int[] maxSlidingWindowImp(int[] nums,int k){
-        
+        if(nums==null||k==1){
+            return nums;
+        }
+
+
+        ArrayDeque<Integer> indexQueue = new ArrayDeque<>(); // 存储窗口最大值下标的队列
+        int numsLength = nums.length;
+        int []results = new int[numsLength-k+1];
+
+        for(int i=0;i<numsLength;i++){
+            if()
+        }
         
     }
 }
