@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
  *
  * [218] The Skyline Problem
  */
-class Solution {
+class Solution218 {
     public static List<List<Integer>> getSkyline(int[][] buildings) {
         return getSkylineImp(buildings);
     }

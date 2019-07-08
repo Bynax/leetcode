@@ -11,7 +11,10 @@ class Solution239 {
     }
 
     static int[] maxSlidingWindowImp(int[] nums,int k){
-        if(nums==null||k==1){
+        if(nums==null||k<=0){
+            return new int[0];
+        }
+        if(k==1){
             return nums;
         }
 
@@ -19,11 +22,25 @@ class Solution239 {
         ArrayDeque<Integer> indexQueue = new ArrayDeque<>(); // 存储窗口最大值下标的队列
         int numsLength = nums.length;
         int []results = new int[numsLength-k+1];
+        int resutsIndex = 0;
 
         for(int i=0;i<numsLength;i++){
-            if()
+            if(!indexQueue.isEmpty()&&indexQueue.peek()<i-k+1){
+                indexQueue.poll();
+            }
+
+            while(!indexQueue.isEmpty()&&nums[indexQueue.peekLast()]<=nums[i]){
+                indexQueue.pollLast();
+            }
+            indexQueue.add(i);
+
+            if(i>=k-1){
+                results[resutsIndex++] = nums[indexQueue.peek()];
+            }
         }
+        return results;
         
-    }
+
+     }
 }
 
