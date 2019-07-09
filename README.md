@@ -35,6 +35,12 @@ vscode+leetcode插件
     - 代码
         - [x] [23.Merge k Sorted Lists](./heap/23.merge-k-sorted-lists.java)
         - [x] [215.Kth Largest Element in an Array](./heap/215.kth-largest-element-in-an-array.java)
+        - [x] [218.The Skyline Problem](./heap218.the-skyline-problem.java)
+        - [x] [239.Sliding Window Maximum](./heap/239.sliding-window-maximum.java)
+        - [x] [295.Find Median from Data Stream](./heap/295.find-median-from-data-stream.java)
+        - [x] [347.Top K Frequent Elements](./heap/347.top-k-frequent-elements.java)
+        - [ ] [378 Kth Smallest Element in a Sorted Matrix](./heap/378.kth-smallest-element-in-a-sorted-matrix.java)
+        - [x] [703.Kth Largest Element in a Stream](./heap/703.kth-largest-element-in-a-stream.java)
 - 字符串
     - [思路](./string/ReadMe.md)
     - 代码
