@@ -36,7 +36,7 @@ class KthLargest {
      */
     public int add(int val) {
         minHeap.offer(val); // 向堆中添加元素
-        this.minHeapSize++; //
+        this.minHeapSize++; // 
         if(minHeapSize>k){
             minHeap.poll();
         }
