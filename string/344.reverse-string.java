@@ -15,7 +15,6 @@ class Solution {
 
     /**
      * 使用双指针交换的方法实现字符串逆序
-     * 
      * @param s
      */
     static void reverseStringImp(char[] s) {
