@@ -6,23 +6,105 @@
 
 - 题目描述
 
+  Given a string, find the length of the **longest substring** without repeating characters.
+
+  **Example 1:**
+
+  ```java
+  Input: "abcabcbb"
+  Output: 3 
+  Explanation: The answer is "abc", with the length of 3. 
+  ```
+
+  **Example 2:**
+
+  ```java
+  Input: "bbbbb"
+  Output: 1
+  Explanation: The answer is "b", with the length of 1.
+  ```
+
 - 思路
 
+  利用双指针的思想，leftPointer和rightPointer代表substring的边界。主要步骤：
+  
+  - 保持leftPointer不变，不断更新rightPointer，此时[leftPointer,rightPointer]表示当前以rightPointer结尾的字串。
+  - 查询rightPointer对应的字符是否出现过，若出现过，则更新leftPointer至rightPointer上次出现位置的下一个位置，为了防止leftPointer回退（因为上次出现的位置可能在leftPointer的前面），因此对上一位置与leftPointer当前位置进行比较，选取较大的值。换种思考方式其实就是如果rightPointer的元素在leftPointer前面出现，则不用管，因为当前的substring不包含该元素，若在leftPointer后面，则在当前的substring中，要进行更新。
+  - 更新当前长度
+  - 更新rightPointer
+  
   
 
 ### [5.Longest Palindromic Substring](./5.longest-palindromic-substring.java)
 
 - 题目描述
+
+  Given an input string (`s`) and a pattern (`p`), implement regular expression matching with support for `'.'` and `'*'`.
+
+  ```
+  '.' Matches any single character.
+  '*' Matches zero or more of the preceding element.
+  ```
+
+  The matching should cover the **entire** input string (not partial).
+
+  **Note:**
+
+  - `s` could be empty and contains only lowercase letters `a-z`.
+  - `p` could be empty and contains only lowercase letters `a-z`, and characters like `.` or `*`.
+
+  **Example 1:**
+
+  ```java
+  Input:
+  s = "aa"
+  p = "a"
+  Output: false
+  Explanation: "a" does not match the entire string "aa".
+  ```
+
+  **Example 2:**
+
+  ```java
+  Input:
+  s = "aa"
+  p = "a*"
+  Output: true
+  Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+  ```
+
+  **Example 3:**
+
+  ```java
+  Input:
+  s = "ab"
+  p = ".*"
+  Output: true
+  Explanation: ".*" means "zero or more (*) of any character (.)".
+  ```
+
+  **Example 4:**
+
+  ```java
+  Input:
+  s = "aab"
+  p = "c*a*b"
+  Output: true
+  Explanation: c can be repeated 0 times, a can be repeated 1 time. Therefore, it matches "aab".
+  ```
+
+  **Example 5:**
+
+  ```java
+  Input:
+  s = "mississippi"
+  p = "mis*is*p*."
+  Output: false
+  ```
+
 - 思路
-  - 
-
-### [8.String to Integer (atoi)](./8.string-to-integer-atoi.java)
-
-- 题目描述
-
-- 思路
-
   
+  - 
 
 ### [10.Regular Expression Matching](./10.regular-expression-matching.java)
 
