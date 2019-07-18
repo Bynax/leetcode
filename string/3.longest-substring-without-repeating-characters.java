@@ -5,7 +5,7 @@ import java.lang.Math;
  *
  * [3] Longest Substring Without Repeating Characters
  */
-class Solution {
+class Solution3 {
     public static int lengthOfLongestSubstring(String s) {
         return lengthOfLongestSubstringImp(s);
     }

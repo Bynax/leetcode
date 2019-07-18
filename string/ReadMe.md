@@ -1,5 +1,12 @@
 ## <center>字符串</center>
 
+## 主要涉及的方法
+
+- 滑动窗口
+- 双指针（一般双指针比滑动窗口灵活）
+- 回溯
+- 动态规划
+
 ## 部分例题
 
 ### [3.Longest Substring Without Repeating Characters](./3.longest-substring-without-repeating-characters.java)
@@ -32,7 +39,6 @@
   - 查询rightPointer对应的字符是否出现过，若出现过，则更新leftPointer至rightPointer上次出现位置的下一个位置，为了防止leftPointer回退（因为上次出现的位置可能在leftPointer的前面），因此对上一位置与leftPointer当前位置进行比较，选取较大的值。换种思考方式其实就是如果rightPointer的元素在leftPointer前面出现，则不用管，因为当前的substring不包含该元素，若在leftPointer后面，则在当前的substring中，要进行更新。
   - 更新当前长度
   - 更新rightPointer
-  
   
 
 ### [5.Longest Palindromic Substring](./5.longest-palindromic-substring.java)
@@ -146,19 +152,8 @@
 
   因为要是前缀，所以必须要从第一个元素开始就要相同。因此大体思路是使用第一个元素作为prefix也就是结果，然后对后面的每个元素进行遍历查看前缀是否与prefix一致，若不一致则将prefix的最后一位discard掉继续比较直到prefix为空字符串或者匹配到。
 
-  
 
-### [17.Letter Combinations of a Phone Number](./17.letter-combinations-of-a-phone-number.java)
-
-- 题目描述
-
-  
-
-- 思路
-
-  - 
-
-### [20.Valid Parentheses)[./20.valid-parentheses.java]
+### [20.Valid Parentheses](./20.valid-parentheses.java)
 
 - 题目描述
 
@@ -193,17 +188,31 @@
 
 - 题目描述
 
-  
+  Given *n* pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+  For example, given *n* = 3, a solution set is:
 
   **Example:**
 
   ```java
-
+  [
+    "((()))",
+    "(()())",
+    "(())()",
+    "()(())",
+    "()()()"
+  ]
   ```
   
 - 思路
 
+  使用回溯的方法。回溯法的三个要点：
 
+  - Choices
+  - Constraints
+  - Goals
+
+  在本题中，每个递归只有两种选择：添加"("或者添加")"。因为给定一个n，会有n个"("和n个")"。而添加左括号的限制条件是当左括号的个数小于n的时候，添加右括号的条件是当左括号的个数大于右括号的个数的时候。当两种括号的个数都为n的时候表示这是一种组合，添加到结果数组中即可。
 
 
 ### [28.Implement strStr()](./28.implement-str-str.java)
@@ -224,7 +233,34 @@
 ### [76.Minimum Window Substring](./76.minimum-window-substring.java)
 
 - 题目描述
+
+  Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+
+  **Example:**
+
+  ```java
+  Input: S = "ADOBECODEBANC", T = "ABC"
+  Output: "BANC"
+  ```
+
+  **Note:**
+
+  - If there is no such window in S that covers all characters in T, return the empty string `""`.
+  - If there is such window, you are guaranteed that there will always be only one unique minimum window in S.
+
 - 思路
+
+  使用滑动窗口的方法。
+
+  - 思路一：滑动窗口+hashmap的方法
+
+    滑动窗口的大体思路使用rightPointer去进行expand窗口，接着通过leftPointer去contract窗口。在本题中，先对rightPointer进行自增操作，当找到一个满足条件的窗口时候对leftPointer进行自增操作。以此类推，直到rightPointer到末尾。
+
+    hashmap是用来验证窗口是否满足条件的。设置一个count变量初始化为t的长度，将t中各个字母出现的频次存储hashmap中，当遍历s串的时候，若hashmap有该元素且大于0的时候，对count进行减操作。当count为0的时候表明该窗口满足条件。
+
+  - 思路二：滑动窗口+数组（思路一的改进）
+
+    大体思路与思路一相同，只是当rightPointer移动的时候，对required数组的元素进行减一操作。因此对应当移动leftPointer的时候对required数组的元素进行加一操作。因此t字符串中的元素会大于0，而t字符串以外的元素在rightPointer移动的时候会小于0当leftPointer移动的时候会等于0。其余的操作基本都一样。
 
 ### [91.Decode Ways](./91.decode-ways.java)
 

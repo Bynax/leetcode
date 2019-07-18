@@ -3,8 +3,9 @@
  *
  * [227] Basic Calculator II
  */
-class Solution {
+class Solution227 {
     public int calculate(String s) {
+        return 0;
         
     }
 }

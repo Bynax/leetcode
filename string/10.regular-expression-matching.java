@@ -3,8 +3,9 @@
  *
  * [10] Regular Expression Matching
  */
-class Solution {
+class Solution10 {
     public boolean isMatch(String s, String p) {
+        return true;
         
     }
 }

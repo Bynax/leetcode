@@ -3,7 +3,7 @@
  *
  * [14] Longest Common Prefix
  */
-class Solution {
+class Solution14 {
     public static String longestCommonPrefix(String[] strs) {
         return longestCommonPrefixNormalImp(strs);
     }

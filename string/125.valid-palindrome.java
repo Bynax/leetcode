@@ -3,7 +3,7 @@
  *
  * [125] Valid Palindrome
  */
-class Solution {
+class Solution125 {
     public static boolean isPalindrome(String s) {
         return isPalindromeImp(s);
     }

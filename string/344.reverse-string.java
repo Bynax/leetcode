@@ -3,7 +3,7 @@
  *
  * [344] Reverse String
  */
-class Solution {
+class Solution344 {
     /**
      * 字符串逆序
      * 

@@ -5,7 +5,7 @@ import java.util.Stack;
  *
  * [20] Valid Parentheses
  */
-class Solution {
+class Solution20 {
     public static boolean isValid(String s) {
         return isValidImp(s);
     }
@@ -17,7 +17,7 @@ class Solution {
         Stack<Character> stack = new Stack<>();
         char[] s2Array = s.toCharArray();
         for (char c : s2Array) {
-            if (c == '{') {
+            if (c == '{') { 
                 stack.push('}');
             } else if (c == '(') {
                 stack.push(')');

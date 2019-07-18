@@ -3,8 +3,9 @@
  *
  * [5] Longest Palindromic Substring
  */
-class Solution {
+class Solution5 {
     public String longestPalindrome(String s) {
+        return "";
         
     }
 }

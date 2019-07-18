@@ -3,9 +3,9 @@
  *
  * [91] Decode Ways
  */
-class Solution {
+class Solution91 {
     public int numDecodings(String s) {
-        
+        return 0;
     }
 }
 

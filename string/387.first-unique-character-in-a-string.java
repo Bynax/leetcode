@@ -3,7 +3,7 @@
  *
  * [387] First Unique Character in a String
  */
-class Solution {
+class Solution387 {
     public static int firstUniqChar(String s) {
         return firstUniqCharImp(s);
     }
