@@ -218,7 +218,33 @@
 ### [28.Implement strStr()](./28.implement-str-str.java)
 
 - 题目描述
+
+  其实就是实现一个KMP算法
+
+  Return the index of the first occurrence of needle in haystack, or **-1** if needle is not part of haystack.
+
+  **Example 1:**
+
+  ```java
+  Input: haystack = "hello", needle = "ll"
+  Output: 2
+  ```
+
+  **Example 2:**
+
+  ```java
+  Input: haystack = "aaaaa", needle = "bba"
+  Output: -1
+  ```
+
 - 思路
+
+  实现KMP算法 [参考资料](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
+
+  - next数组的求解
+  - 算法过程
+
+  
 
 ### [44.Wildcard Matching](./44.wildcard-matching.java)
 
