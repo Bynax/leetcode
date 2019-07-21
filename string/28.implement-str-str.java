@@ -21,7 +21,7 @@ class Solution {
         if (haystackLength < needleLength) {
             return -1; // 边界情况检测
         }
-        if(needleLength==0){
+        if (needleLength == 0) {
             return 0; // 边界情况检测
         }
         int[] next = getNext(needle); // 获取next数组
@@ -33,10 +33,10 @@ class Solution {
                 haystackIndex++;
                 needleIndex++;
             } else { // 不匹配
-                if (needleIndex != 0) {
-                    needleIndex = next[needleIndex - 1];
+                if (next[needleIndex] == -1) {
+                    haystackIndex++; // 已经在第一位了
                 } else {
-                    haystackIndex++;
+                    needleIndex = next[needleIndex];
                 }
             }
 
@@ -56,19 +56,23 @@ class Solution {
      * @return
      */
     static int[] getNext(String pattern) {
-        
         int length = pattern.length();
+        if (length == 1) {
+            return new int[] { -1 };
+        }
         int[] next = new int[length];
+        next[0] = -1; // 规定第一个为-1
+        next[1] = 0; // 规定第二个为0
         int left = 0;
-        int right = 1;
+        int right = 2;
         while (right < length) {
-            if (pattern.charAt(right) == pattern.charAt(left)) { 
+            if (pattern.charAt(right-1) == pattern.charAt(left)) {
                 next[right] = left + 1; // left表示的是当前有多少字符匹配
                 left++;
                 right++;
             } else {
-                if (left != 0) {
-                    left = next[left - 1];
+                if (left > 0) {
+                    left = next[left];
                 } else {
                     next[right] = 0;
                     right++;
