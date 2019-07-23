@@ -239,11 +239,14 @@
 
 - 思路
 
-  实现KMP算法 [参考资料](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
+  实现KMP算法 
 
   - next数组的求解
   - 算法过程
-
+- 参考资料
+    - 牛客网算法进阶版
+    - [youtube视频](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
+  
   
 
 ### [44.Wildcard Matching](./44.wildcard-matching.java)
