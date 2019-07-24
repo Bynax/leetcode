@@ -242,11 +242,39 @@
   实现KMP算法 
 
   - next数组的求解
-  - 算法过程
-- 参考资料
-    - 牛客网算法进阶版
-    - [youtube视频](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
   
+    **next数组记录的是当前位置之前的字符串最长前缀和后缀匹配的长度(不包含当前字符)。且前缀不包含最后一个字符，后缀不包含第一个字符。**
+  
+    - 初始化第一个位置为-1，第二个位置为0
+    - right记录当前计算的位置，left记录当前最大匹配到前缀的位置
+    - 若当前字符的前一个字符与left相等，则next[right] = left+1
+    - 若不等
+      - 若left在最左端，则只能right++，当前next[right]=0
+      - 若不在最左端，则将left跳到next[left]中去。
+  
+  - 算法过程
+  
+    **算法的思想是str1的下标只会向前移动，而str2的下标根据求出的next数组移动**
+  
+    - 若匹配，则str1和str2的index都向前移动
+    - 若不匹配
+      - 若next[str2Index]==-1，表示已经移动到开头了。只将str1的下标向前移动
+      - 若不等于-1，则将str1的下标移动到next数组对应的位置去。
+  
+  - KMP算法过程实质
+  
+    ![有效性](./pics/kmp1.png)
+  
+  - next数组求解过程
+  
+    ​	![next数组](./pics/next.png)
+  
+    
+  
+    
+- 参考资料
+    - [youtube视频](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
+
   
 
 ### [44.Wildcard Matching](./44.wildcard-matching.java)
