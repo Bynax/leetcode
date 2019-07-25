@@ -45,6 +45,20 @@
 
 - 题目描述
 
+- 思路
+
+  - BF
+
+    BF的方法存在的主要问题是解决奇回文和偶回文的问题。解决方法是在首尾中间加入特殊字符。接着暴力扩就可以。
+
+  - Manacher算法
+
+    ![manacher](./pics/manacher.png)
+
+### [10.Regular Expression Matching](./10.regular-expression-matching.java)
+
+- 题目描述
+
   Given an input string (`s`) and a pattern (`p`), implement regular expression matching with support for `'.'` and `'*'`.
 
   ```
@@ -110,20 +124,9 @@
 
 - 思路
   
-  - 
-
-### [10.Regular Expression Matching](./10.regular-expression-matching.java)
-
-- 题目描述
-
   
 
-- 思路
 
-  首先进行数组的遍历，同时维护一个下标窗口来保存窗口的最大值。总体的思路为：
-  将失效元素的下标移除。如遍历到第五个元素，窗口值为3时候，此时最大值只可能出现在3，4，5中，将0，1，2称为失效元素。**因为每次只滑动一个值，因此每次也只有一个元素失效，所以这边用if代替while**
-  第二步是判断当前元素与已经遍历元素的关系，若之前的元素比当前元素小，则之前元素没有资格成为当前窗口的最大值，因此将之前元素下标移除。
-  判断是否到达一个窗口的极限，若此时到了一个窗口的边界，则将此时的最大值（在队头）存入结果中。
 
 ### [14.Longest Common Prefix](./14.longest-common-prefix.java)
 
@@ -360,7 +363,7 @@
 
   利用双指针，一个指向开头一个指向结尾。交换对应元素即可。
 
-### [387First Unique Character in a String](./387.first-unique-character-in-a-string.java)
+### [387.First Unique Character in a String](./387.first-unique-character-in-a-string.java)
 
 - 题目描述
 
