@@ -34,38 +34,50 @@ class Solution {
 
     /**
      * 使用动态规划的方法实现isMatch
+     * 
      * @param s s for string
      * @param p p for pattern
      * @return
      */
-    boolean isMatchDp(String s,String p){
-        if(p.isEmpty()){
+    boolean isMatchDp(String s, String p) {
+        if (p.isEmpty()) {
             return s.isEmpty();
         }
         int pLength = p.length();
         int sLength = s.length();
-        boolean[][] match = new boolean[pLength+1][sLength+1];
+        boolean[][] match = new boolean[pLength + 1][sLength + 1];
 
         // 初始化
 
         // 完成match数组
-        for(int i=0;i<pLength;i++){
-            for (int j=0;j<sLength;j++){
-                if(p.charAt(i)==s.charAt(j)){ // p是字符的情况
-                    match[i][j] = match[i-1][j-1];
+        for (int i = 0; i < pLength; i++) {
+            for (int j = 0; j < sLength; j++) {
+                if (p.charAt(i) == s.charAt(j)) { 
+                    // p是字符的情况
+                    match[i][j] = match[i - 1][j - 1];
                 }
-                if(p.charAt(i)=='.'){ // p是'.'的情况
-                    match[i][j] = match[i-1][j-1];
+                if (p.charAt(i) == '.') { 
+                    // p是'.'的情况
+                    match[i][j] = match[i - 1][j - 1];
                 }
 
-                if(p.charAt(i)=='*'){ // p是'*'的情况
-                    match[i][j] = match[i-1][j-1];
+                if (p.charAt(i) == '*') { 
+                    // p是'*'的情况
+                    // if(p[i-1] == s[j] && p[i+1] != s[j]){
+
+                    // }
+                    // 不等的情况
+                    if (p.charAt(i) != s.charAt(i) || p.charAt(i) != '.') {
+                        // 
+                        match[i][j] = match[i-2][j];
+                    } else {
+                        match[i][j] = 
+
+                    }
                 }
-                
+
             }
         }
-
-
 
         // 返回结果
         return match[pLength][sLength];
