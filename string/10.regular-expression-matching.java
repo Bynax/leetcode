@@ -61,8 +61,8 @@ class Solution {
             for (int j = 1; j < sLength; j++) {
                 if (p.charAt(i - 1) == '*') {
                     match[i][j] = match[i - 2][j]
-                            || (p.charAt(i - 2) == s.charAt(j - 1) || '.' == p.charAt(i - 2)) && match[i][j - 1]; 
-                            // 当此单元对应的字符是'*'时，两种情况分别对应匹配0的状态和0到any的状态
+                            || (p.charAt(i - 2) == s.charAt(j - 1) || '.' == p.charAt(i - 2)) && match[i][j - 1];
+                    // 当此单元对应的字符是'*'时，两种情况分别对应匹配0的状态和0到any的状态
                 } else {
                     match[i][j] = match[i - 1][j - 1] && ('.' == p.charAt(i - 1) || p.charAt(i - 1) == s.charAt(j - 1));
                     // 当此单元对应不是*时，看左上角的状态和当前字符是否匹配两者做与运算的结果
