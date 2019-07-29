@@ -4,9 +4,8 @@
  * [10] Regular Expression Matching
  */
 class Solution {
-    public boolean isMatch(String s, String p) {
+    public static boolean isMatch(String s, String p) {
         return isMatchDp(s, p);
-
     }
 
     /**
@@ -39,49 +38,39 @@ class Solution {
      * @param p p for pattern
      * @return
      */
-    boolean isMatchDp(String s, String p) {
+    static boolean isMatchDp(String s, String p) {
         if (p.isEmpty()) {
             return s.isEmpty();
         }
-        int pLength = p.length();
-        int sLength = s.length();
-        boolean[][] match = new boolean[pLength + 1][sLength + 1];
 
+        int sLength = s.length() + 1;
+        int pLength = p.length() + 1;
+        // s和p各多一个空字符作为初始化
+        boolean match[][] = new boolean[pLength][sLength];
         // 初始化
-
-        // 完成match数组
-        for (int i = 0; i < pLength; i++) {
-            for (int j = 0; j < sLength; j++) {
-                if (p.charAt(i) == s.charAt(j)) { 
-                    // p是字符的情况
-                    match[i][j] = match[i - 1][j - 1];
+        match[0][0] = true; // 初始化第一个元素，两个空字符匹配
+        // 因为空字符匹配s串都是为false，是默认的所以不需要初始化
+        // 初始化p，因为p有'*'的出现，所以可能有true
+        for (int i = 1; i < pLength; i++) {
+            if (p.charAt(i - 1) == '*') {
+                match[i][0] = match[i - 2][0];
+            }
+        }
+        // 填数组
+        for (int i = 1; i < pLength; i++) {
+            for (int j = 1; j < sLength; j++) {
+                if (p.charAt(i - 1) == '*') {
+                    match[i][j] = match[i - 2][j]
+                            || (p.charAt(i - 2) == s.charAt(j - 1) || '.' == p.charAt(i - 2)) && match[i][j - 1]; 
+                            // 当此单元对应的字符是'*'时，两种情况分别对应匹配0的状态和0到any的状态
+                } else {
+                    match[i][j] = match[i - 1][j - 1] && ('.' == p.charAt(i - 1) || p.charAt(i - 1) == s.charAt(j - 1));
+                    // 当此单元对应不是*时，看左上角的状态和当前字符是否匹配两者做与运算的结果
                 }
-                if (p.charAt(i) == '.') { 
-                    // p是'.'的情况
-                    match[i][j] = match[i - 1][j - 1];
-                }
-
-                if (p.charAt(i) == '*') { 
-                    // p是'*'的情况
-                    // if(p[i-1] == s[j] && p[i+1] != s[j]){
-
-                    // }
-                    // 不等的情况
-                    if (p.charAt(i) != s.charAt(i) || p.charAt(i) != '.') {
-                        // 
-                        match[i][j] = match[i-2][j];
-                    } else {
-                        match[i][j] = 
-
-                    }
-                }
-
             }
         }
 
-        // 返回结果
-        return match[pLength][sLength];
-
+        return match[pLength - 1][sLength - 1];
     }
 
 }

@@ -124,9 +124,9 @@
 
 - 思路
   
+  可以有两种实现方法：递归和动态规划。
   
-
-
+  以匹配串p为思考点，若当前字符为“\*”，则有两种情况，一种是“\*”表示0个字符。一种是表示一个或多个前面匹配的字符。
 
 ### [14.Longest Common Prefix](./14.longest-common-prefix.java)
 
@@ -274,8 +274,8 @@
   
     
   
-    
 - 参考资料
+    
     - [youtube视频](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
 
   
