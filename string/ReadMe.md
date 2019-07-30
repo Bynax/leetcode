@@ -275,20 +275,38 @@
     
   
 - 参考资料
-    
+  
     - [youtube视频](https://www.youtube.com/watch?v=GTJr8OvyEVQ&t=2s)
 
-  
-
-### [44.Wildcard Matching](./44.wildcard-matching.java)
-
-- 题目描述
-- 思路
 
 ### [49.Group Anagrams](./49.group-anagrams.java)
 
-- 题目藐视
+- 题目描述
+
+  Given an array of strings, group anagrams together.
+
+  **Example:**
+
+  ```java
+  Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+  Output:
+  [
+    ["ate","eat","tea"],
+    ["nat","tan"],
+    ["bat"]
+  ]
+  ```
+
+  **Note:**
+
+  - All inputs will be in lowercase.
+  - The order of your output does not matter.
+
 - 思路
+
+  [解法](https://leetcode.com/problems/group-anagrams/solution/)
+
+  大体思路就是单词之间如果出现的字符频次相同，则认为是一组，所以要使用出现单词的频次作为key，这里采用的方法是26个字母，故使用#1#2#3#…..这种方法表示a出现1次，b出现2次，c出现3次等，使用这样的字符串作为key，没个输入的字符串作为value。
 
 ### [76.Minimum Window Substring](./76.minimum-window-substring.java)
 
@@ -322,20 +340,15 @@
 
     大体思路与思路一相同，只是当rightPointer移动的时候，对required数组的元素进行减一操作。因此对应当移动leftPointer的时候对required数组的元素进行加一操作。因此t字符串中的元素会大于0，而t字符串以外的元素在rightPointer移动的时候会小于0当leftPointer移动的时候会等于0。其余的操作基本都一样。
 
-### [91.Decode Ways](./91.decode-ways.java)
-
-- 题目描述
-- 思路
-
 ### [125.Valid Palindrome](./125.valid-palindrome.java)
 
 - 题目描述
+
+  判断一个字符是否是有效的回文串
+
 - 思路
 
-### [227.Basic Calculator II](./227.basic-calculator-ii.java)
-
-- 题目描述
-- 思路
+  利用双指针的方法，先判断是否为有效字符，比较start和end指向的内容是否相同，接着更新start和end，若中途不匹配直接返回false。
 
 ### [344.Reverse String](./344.reverse-string.java)
 
@@ -356,8 +369,6 @@
   Input: ["H","a","n","n","a","h"]
   Output: ["h","a","n","n","a","H"]
   ```
-
-  
 
 - 思路
 

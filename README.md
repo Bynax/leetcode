@@ -46,18 +46,15 @@ vscode+leetcode插件
     - 代码
       
         - [x] [3.Longest Substring Without Repeating Characters](./string/3.longest-substring-without-repeating-characters.java)
-        - [ ] [5.Longest Palindromic Substring](./string/5.longest-palindromic-substring.java)
-        - [ ] [10.Regular Expression Matching](./string/10.regular-expression-matching.java)
+        - [x] [5.Longest Palindromic Substring](./string/5.longest-palindromic-substring.java)
+        - [x] [10.Regular Expression Matching](./string/10.regular-expression-matching.java)
         - [x] [14.Longest Common Prefix](./string/14.longest-common-prefix.java)
         - [x] [20.Valid Parentheses](./string/20.valid-parentheses.java)
         - [x] [22.Generate Parentheses](./string/22.generate-parentheses.java)
         - [x] [28.Implement strStr()](./string/28.implement-str-str.java)
-        - [ ] [44.Wildcard Matching](./string/44.wildcard-matching.java)
-        - [ ] [49.Group Anagrams](./string/49.group-anagrams.java)
+        - [x] [49.Group Anagrams](./string/49.group-anagrams.java)
         - [x] [76.Minimum Window Substring](./string/76.minimum-window-substring.java)
-        - [ ] [91.Decode Ways](./string/91.decode-ways.java)
         - [x] [125.Valid Palindrome](./string/125.valid-palindrome.java)
-        - [ ] [227.Basic Calculator II](./string/227.basic-calculator-ii.java)
         - [x] [344.Reverse String](./string/344.reverse-string.java)
         - [x] [387First Unique Character in a String](./string/387.first-unique-character-in-a-string.java)
         
