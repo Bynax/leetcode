@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BookReading",
+            "request": "launch",
+            "mainClass": "BookReading",
+            "projectName": "leetcode_df431980"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "leetcode_df431980"
+        }
+    ]
+}
