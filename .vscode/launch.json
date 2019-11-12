@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Conv",
+            "request": "launch",
+            "mainClass": "Conv",
+            "projectName": "leetcode_df431980"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "leetcode_df431980"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BookReading",
             "request": "launch",
             "mainClass": "BookReading",
