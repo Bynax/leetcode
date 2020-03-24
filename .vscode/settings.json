@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "__tuple": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "__split_buffer": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp"
+    }
+}
